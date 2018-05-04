@@ -11,7 +11,7 @@ public class Seance {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "Data")
+    @Column(name = "DataOfSeance")
     private LocalDateTime data;
 
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)

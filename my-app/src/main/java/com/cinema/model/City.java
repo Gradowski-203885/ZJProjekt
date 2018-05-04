@@ -14,7 +14,7 @@ public class City {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "Name")
+    @Column(name = "NameOfCity")
     private String name;
 
     @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY, orphanRemoval = true)

@@ -12,7 +12,7 @@ public class ScreeningRoom {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "Number")
+    @Column(name = "NumberOfRoom")
     private int number;
 
     @Column(name = "Sponsor_Name")
