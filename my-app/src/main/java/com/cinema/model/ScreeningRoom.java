@@ -27,7 +27,7 @@ public class ScreeningRoom {
     private List<Seance> seances = new ArrayList<>();
 
     @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY, orphanRemoval = true)
-    @JoinColumn(name = "Seats_idSeats")
+    @JoinColumn(name = "ScreeningRooms_idScreeningRooms")
     private List<Seat> seats = new ArrayList<>();
 
     public long getId() {
