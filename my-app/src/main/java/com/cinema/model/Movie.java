@@ -2,6 +2,8 @@ package com.cinema.model;
 
 
 import javax.persistence.*;
+import java.time.Duration;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,14 +25,14 @@ public class Movie {
     private String director;
 
     @Column(name = "PremiereDate")
-    private String premiere;
+    private LocalDate premiere;
 
     @Column(name = "Duration")
-     private String duration;
+     private Duration duration;
 
     @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY, orphanRemoval = true)
     @JoinColumn(name = "Movies_idMovies")
-   private List<Seance> seances = new ArrayList<>();
+    private List<Seance> seances = new ArrayList<>();
 
 
     public long getId() {
@@ -65,19 +67,19 @@ public class Movie {
         this.director = director;
     }
 
-    public String getPremiere() {
+    public LocalDate getPremiere() {
         return premiere;
     }
 
-    public void setPremiere(String premiere) {
+    public void setPremiere(LocalDate premiere) {
         this.premiere = premiere;
     }
 
-    public String getDuration() {
+    public Duration getDuration() {
         return duration;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(Duration duration) {
         this.duration = duration;
     }
 

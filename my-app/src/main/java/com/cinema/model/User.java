@@ -17,6 +17,9 @@ public class User {
     @Column(name="LastName")
     private String lastName;
 
+    @Column(name = "Password")
+    private String password;
+
     @Column(name="Email")
     private String email;
 
@@ -73,5 +76,13 @@ public class User {
 
     public void setTickets(List<Ticket> tickets) {
         this.tickets = tickets;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
