@@ -1,5 +1,5 @@
-INSERT INTO cities(id,name_of_city) VALUES (1,'Łódź');
-INSERT INTO cities(id,name_of_city) VALUES (2,'Poznań');
+INSERT INTO cities (id,name_of_city) VALUES (1,'Łódź');
+INSERT INTO cities (id,name_of_city) VALUES (2,'Poznań');
 
 --
 -- INSERT INTO cinemas (id,address,cities_id_cities) VALUES (1,'Drewnowska 58',1);
