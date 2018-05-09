@@ -18,6 +18,11 @@ public class UserManager implements UserService {
     }
 
     @Override
+    public User getUser(String email){
+        return userRepository.findByEmail(email);
+    }
+
+    @Override
     public Long updateUser(User user) {
         User toUpdate = userRepository.findOne(user.getId());
         toUpdate.setEmail(user.getEmail());
