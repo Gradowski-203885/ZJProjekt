@@ -25,7 +25,7 @@ public class DataFormValidator {
 
         if(user == null){
             result.getResults().put("incorrect-email", "");
-        } else if (!passwordEncoder.matches(form.getPassword(), user.getPassword())){
+        } else if (!form.getPassword().equals(user.getPassword())){
             result.getResults().put("incorrect-password", "");
         }
 

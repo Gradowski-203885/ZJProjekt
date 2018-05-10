@@ -27,7 +27,7 @@ public class RegisterController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String register(Model model, @ModelAttribute("registerform")RegisterDataForm form){
+    public String register(@ModelAttribute("registerform")RegisterDataForm form){
         ValidationResult result = dataFormValidator.validate(form);
 
         if(result.getResults().containsKey("user-exists")){
@@ -55,6 +55,6 @@ public class RegisterController {
 
         userService.addUser(user);
 
-        return "main";
+        return "login-page";
     }
 }
