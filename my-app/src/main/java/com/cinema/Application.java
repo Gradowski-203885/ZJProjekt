@@ -29,11 +29,6 @@ public class Application {
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
     public Java8TimeDialect java8TimeDialect(){
         return new Java8TimeDialect();
     }

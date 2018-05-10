@@ -22,9 +22,6 @@ public class LoginController {
     private UserService userService;
 
     @Autowired
-    private PasswordEncoder passwordEncoder;
-
-    @Autowired
     private DataFormValidator dataFormValidator;
 
     @RequestMapping("/login-page")
@@ -45,6 +42,12 @@ public class LoginController {
         User user = userService.getUser(form.getEmail());
         model.addAttribute("user", user);
         request.getSession().setAttribute("user", user);
+        return "main";
+    }
+
+    @RequestMapping(value = "/logout-page")
+    public String logout(HttpServletRequest request){
+        request.getSession().setAttribute("user", null);
         return "main";
     }
 }

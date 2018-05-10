@@ -12,9 +12,6 @@ public class DataFormValidator {
     private UserService userService;
 
     @Autowired
-    private PasswordEncoder passwordEncoder;
-
-    @Autowired
     private EmailValidator emailValidator;
 
     public ValidationResult validate(LoginDataForm form){
