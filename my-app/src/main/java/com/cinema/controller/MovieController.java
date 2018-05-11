@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -19,9 +20,9 @@ public class MovieController {
     @Autowired
     MovieService movieService;
 
-    @RequestMapping(value = "/movie/{id}", method = RequestMethod.GET)
-    public String showMovieDetails(Model model, HttpServletRequest request, @PathVariable Long id) throws CloneNotSupportedException{
-        Movie movie = movieService.getMovie(id);
+    @RequestMapping(value = "/movie", method = RequestMethod.GET, params = {"id"})
+    public String showMovieDetails(Model model, HttpServletRequest request, @RequestParam(name = "id") String id) throws CloneNotSupportedException{
+        Movie movie = movieService.getMovie(Long.parseLong(id));
         model.addAttribute(movie);
         return "movie";
     }

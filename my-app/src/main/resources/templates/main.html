@@ -14,5 +14,19 @@
 </head>
 <body>
     <div th:include="header :: header"></div>
+    <!--<th:block th:each="m : ${movies}">-->
+<!--&lt;!&ndash;    <div class="list-group"> &ndash;&gt;-->
+        <!--<a href="@{movie.html(id=${m.id})}" class="list-group-item list-group-item-action" th:text="${m.title}"/>-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--</th:block>-->
+    <tbody id="myTable">
+    <th:block th:each="m : ${movies}">
+        <tr class="text-white">
+            <td><a th:href="@{/movie(id=${m.id})}"><p th:text="${m.title}" class="mb-0"></a></p></td>
+        </tr>
+    </th:block>
+    </tbody>
+
+
 </body>
 </html>
