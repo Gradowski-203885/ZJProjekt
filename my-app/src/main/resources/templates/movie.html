@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl-PL" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>NAZWA_FILMU_VAL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          type="text/css">
+    <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: none;
+        }
+    </style>
+</head>
+<body>
+<div th:include="header :: header"></div>
+<div class="container">
+    <div class="row justify-content-around">
+        <div class="col-md-6">
+            <div>
+                <span class="label label-primary">Tytuł</span>
+                <label th:text="${movie.title}" class="mb-0"/>
+            </div>
+            <div>
+                <span class="label label-info">Reżyser</span>
+                <label th:text="${movie.director}" class="mb-0"/>
+            </div>
+            <div>
+                <span class="label label-info">Aktorzy</span>
+                <label th:text="${movie.actor}" class="mb-0"/>
+            </div>
+            <div>
+                <span class="label label-info">Długość</span>
+                <label th:text="${movie.duration}" class="mb-0"/>
+
+            </div>
+            <div>
+                <span class="label label-info">Data Premiery</span>
+                <label th:text="${movie.premiere}" class="mb-0"/>
+            </div>
+        </div>
+    </div>
+</div>
