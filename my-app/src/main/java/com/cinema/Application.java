@@ -43,6 +43,9 @@ public class Application {
         return new EmailValidator();
     }
 
+
+
+
     @Bean
     public UserService userService(){
         return new UserManager();
