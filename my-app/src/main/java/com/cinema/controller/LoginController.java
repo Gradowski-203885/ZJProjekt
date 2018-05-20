@@ -42,12 +42,12 @@ public class LoginController {
         User user = userService.getUser(form.getEmail());
         model.addAttribute("user", user);
         request.getSession().setAttribute("user", user);
-        return "main";
+        return "redirect:/main";
     }
 
     @RequestMapping(value = "/logout-page")
     public String logout(HttpServletRequest request){
         request.getSession().setAttribute("user", null);
-        return "main";
+        return "redirect:/main";
     }
 }
