@@ -29,6 +29,11 @@ public class LoginController {
         return "login-page";
     }
 
+    @RequestMapping("/aboutus")
+    public String aboutus(){
+        return "aboutus";
+    }
+
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(Model model,
                         HttpServletRequest request,
