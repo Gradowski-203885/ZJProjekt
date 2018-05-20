@@ -48,6 +48,6 @@ public class LoginController {
     @RequestMapping(value = "/logout-page")
     public String logout(HttpServletRequest request){
         request.getSession().setAttribute("user", null);
-        return "redirect:/main";
+        return "logout-page";
     }
 }
